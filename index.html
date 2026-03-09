@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registration form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="registration-form" id="regForm">
+            <h2>Registration Form</h2>
+            <form>
+                <label>STUDENT NAME: <input type="text" placeholder="enter your name" id="f-name" required></label><br>
+                <label>FATHER NAME: <input type="text" name="fn" placeholder="Father Name" id="L-name"
+                        required></label><br>
+                <label>DATE OF BIRTH: <input type="date" name="DOB" id="DOB" required></label><br>
+                <label>MOBILE NUMBER: <input type="number" name="phone" placeholder="number" id="mobile" maxlength="13"
+                        required></label><br>
+                <label> CNIC NUMBER: <input type="number" name="cnic" placeholder="CNIC number" id="f-cnic" size="15"
+                        maxlength="15" required></label><br>
+                <label>EMAIL ADDRESS: <input id="f-email" type="email" placeholder="email" required> </label><br>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="terms" required>
+                    <label for="terms">I agree to the <a href="#">Terms & Conditions</a></label>
+                </div>
+                <div class="btn-group"><button type="submit" id="submit" class="btn submit"
+                        onclick="submitForm()">Submit Form</button>
+                    <button type="button" id="preview" class="btn reset" onclick="previewCards()">Preview form</button>
+                </div>
+            </form>
+            <div id="message" class="success"></div>
+        </div>
+    </div>
+    <div class="card " id="previewCard" style="display:none;">
+        <h2>Preview Information</h2>
+        <p id="fullName"> </p>
+        <p id="Dob"></p>
+        <p id="mobileNumber"></p>
+        <p id="cnicNumber"></p>
+        <p id="emailAddress"></p>
+        <button class="btn" id="backBtn" onclick="backToForm()">Back to Form</button>
+</div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>

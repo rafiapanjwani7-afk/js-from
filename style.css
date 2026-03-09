@@ -1,0 +1,126 @@
+body {
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1600&q=80')
+    no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.container {
+    width: 400px;
+    max-width: 90%;
+}
+
+.registration-form,
+.card {
+    width: 100% ;
+    padding: 30px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: #fff;
+    box-shadow: 0 10px 25px rgba(240,46,170,0.3);
+}
+.registration-form,.card:hover{
+    box-shadow:0 20px 40px rgba(240,46,170,0.5);
+}
+.card {
+    display: none;
+    width: 100% !important;
+    max-width: 400px;       /* same as form */
+    margin: 0 auto;          /* center */
+    padding: 30px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: #fff;
+    box-shadow: 0 10px 25px rgba(240,46,170,0.3);
+}
+.card{
+    display:none;
+}
+.checkbox-group label{
+    margin:0;
+}
+.registration-form h2,
+.card h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+label{
+    display:block;
+    margin-bottom:5px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 5px;
+    border: none;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.1);
+    color: white;
+}
+
+input::placeholder {
+    color: rgba(255,255,255,0.7);
+}
+
+input:focus {
+    outline:none;
+    border:1px solid #ff66aa;
+    box-shadow:0 0 8px #ff66aa;
+}
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+   
+}
+.checkbox-group input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #ff6ec4;
+}
+a{
+    color : rgb(2, 2, 2);
+}
+
+.btn-group{
+    display:flex;
+    gap:10px;
+}
+
+button.btn{
+    flex:1;
+    padding:12px;
+    background: linear-gradient(135deg,#ff66aa,#ff2a8a);
+    color:white;
+    border:none;
+    border-radius:15px;
+    cursor:pointer;
+    font-weight:600;
+    margin-top:10px;
+}
+
+button.btn:hover{
+    transform: translateY(-3px);
+    box-shadow:0 8px 25px rgba(255,102,170,0.5);
+}
+
+@media (max-width:500px){
+    .container{
+        width:90%;
+    }
+     .btn-group{
+        flex-direction:column;
+    }
+}
