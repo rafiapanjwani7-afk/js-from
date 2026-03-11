@@ -14,6 +14,10 @@ body {
 .container {
     width: 400px;
     max-width: 90%;
+     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .registration-form,
@@ -33,8 +37,8 @@ body {
 .card {
     display: none;
     width: 100% !important;
-    max-width: 400px;       /* same as form */
-    margin: 0 auto;          /* center */
+    max-width: 400px;       
+    margin: 0 auto !important;          
     padding: 30px;
     border-radius: 20px;
     background: rgba(255,255,255,0.1);
@@ -42,10 +46,26 @@ body {
     border: 1px solid rgba(255,255,255,0.2);
     color: #fff;
     box-shadow: 0 10px 25px rgba(240,46,170,0.3);
+    display: flex;
+    
+} 
+.card {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
-.card{
-    display:none;
+
+.card p {
+    background: rgba(255,255,255,0.1);
+    padding: 10px;
+    border-radius: 10px;
+    margin: 8px 0;
+    word-spacing: 3px;
+    text-transform: capitalize;
 }
+
 .checkbox-group label{
     margin:0;
 }
@@ -79,6 +99,10 @@ input:focus {
     border:1px solid #ff66aa;
     box-shadow:0 0 8px #ff66aa;
 }
+.success{
+    text-align: center;
+    padding-top: 8px;
+}
 .checkbox-group {
     display: flex;
     align-items: center;
@@ -91,7 +115,7 @@ input:focus {
     accent-color: #ff6ec4;
 }
 a{
-    color : rgb(2, 2, 2);
+    color : #8b0843;
 }
 
 .btn-group{
